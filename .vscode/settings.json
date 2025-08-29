@@ -1,0 +1,16 @@
+{
+    "git.ignoreLimitWarning": true,
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "tailwindCSS.includeLanguages": {
+        "javascript": "javascript",
+        "html": "html"
+    },
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "emmet.includeLanguages": {
+        "javascript": "html"
+    }
+}
