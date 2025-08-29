@@ -1,36 +1,134 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+EmailSmart AI - Frontend
+Sistema inteligente de classificação automática de emails corporativos com interface moderna e responsiva desenvolvida em Next.js.
+Funcionalidades
 
-## Getting Started
+Classificação Automática: Identifica emails como produtivos ou improdutivos
+Upload de Arquivos: Suporte a múltiplos formatos (PDF, TXT, DOCX, DOC, HTML, RTF)
+Inserção de Texto: Interface para colar texto diretamente
+Drag & Drop: Funcionalidade de arrastar e soltar arquivos
+Respostas Inteligentes: Gera respostas contextualizadas automaticamente
+Interface Moderna: Design com glassmorphism, gradientes e animações
+Responsivo: Otimizado para desktop e mobile
 
-First, run the development server:
+Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Framework: Next.js 13+ (App Router)
+Estilização: Tailwind CSS
+Linguagem: JavaScript (ES6+)
+Fontes: Inter (Google Fonts)
+Animações: CSS customizadas + Tailwind
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Instalação e Configuração
+Pré-requisitos
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Node.js 18+
+npm ou yarn
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Passos de Instalação
 
-## Learn More
+Clone o repositório
+bashgit clone [url-do-repositorio]
+cd emailsmart-ai-frontend
 
-To learn more about Next.js, take a look at the following resources:
+Instale as dependências
+bashnpm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Configure as variáveis de ambiente
+Crie um arquivo .env.local na raiz:
+envNEXT_PUBLIC_API_URL=http://localhost:8000
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Inicie o servidor de desenvolvimento
+bashnpm run dev
 
-## Deploy on Vercel
+Acesse a aplicação
+http://localhost:3000
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Configuração do Tailwind CSS
+O projeto usa configurações customizadas do Tailwind para animações e estilos únicos:
+Animações Personalizadas
+
+fadeInUp: Entrada suave de baixo para cima
+slideIn: Deslizamento lateral
+shimmer: Efeito de brilho
+pulse-glow: Pulsação com brilho
+
+Classes Utilitárias
+
+.btn-gradient-blue: Botão com gradiente azul
+.btn-gradient-green: Botão com gradiente verde
+.glass-effect: Efeito glassmorphism
+.shimmer-effect: Container com efeito shimmer
+
+Componentes Principais
+EmailForm
+Componente principal que gerencia:
+
+Upload de arquivos (drag & drop + seleção manual)
+Inserção de texto direto
+Validações de formato e tamanho
+Comunicação com a API backend
+
+ResultsDisplay
+Exibe os resultados da análise:
+
+Classificação com indicador visual
+Barra de confiança animada
+Resposta sugerida com botão de copiar
+Dicas contextuais baseadas na classificação
+
+LoadingSpinner
+Loading avançado com:
+
+Spinner duplo com rotações opostas
+Indicadores de progresso das etapas
+Animações suaves
+
+Formatos de Arquivo Suportados
+FormatoExtensãoDescriçãoPDF.pdfDocumentos Adobe PDFTexto.txtArquivos de texto simplesWord.docx, .docMicrosoft WordHTML.htmlPáginas webRTF.rtfRich Text Format
+Limites: Máximo 10MB por arquivo
+API Integration
+Endpoints Utilizados
+
+POST /process-email: Processa texto direto
+POST /process-file: Processa arquivos enviados
+
+Formato de Resposta Esperado
+json{
+  "category": "Produtivo|Improdutivo",
+  "confidence": 0.85,
+  "response": "Resposta sugerida gerada pela IA",
+  "email_preview": "Preview do email processado"
+}
+Scripts Disponíveis
+bashnpm run dev      # Servidor de desenvolvimento
+npm run build    # Build de produção
+npm run start    # Servidor de produção
+npm run lint     # Verificação de código
+Personalização de Estilos
+Modificar Cores Primárias
+No tailwind.config.js, ajuste as cores em theme.extend.colors:
+javascriptcolors: {
+  'primary': {
+    400: '#sua-cor',
+    500: '#sua-cor',
+    600: '#sua-cor',
+  }
+}
+Adicionar Novas Animações
+Em globals.css, adicione keyframes personalizados:
+css@keyframes suaAnimacao {
+  0% { /* estado inicial */ }
+  100% { /* estado final */ }
+}
+Configuração do VS Code
+Recomendado criar .vscode/settings.json:
+json{
+  "css.validate": false,
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
+}
