@@ -1,8 +1,7 @@
-#📧 EmailSmart AI - Frontend
-
+# 📧 EmailSmart AI - Frontend
 Sistema inteligente de classificação automática de emails corporativos com interface moderna e responsiva desenvolvida em Next.js.
 
-##✨ Funcionalidades
+## ✨ Funcionalidades
 
 🧠 Classificação Automática: Identifica emails como produtivos ou improdutivos
 
@@ -18,7 +17,7 @@ Sistema inteligente de classificação automática de emails corporativos com in
 
 📱 Responsivo: Otimizado para desktop e mobile
 
-##🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 Framework: Next.js 13+ (App Router)
 
@@ -30,7 +29,7 @@ Fontes: Inter (Google Fonts)
 
 Animações: CSS customizadas + Tailwind
 
-##⚡ Instalação e Configuração
+## ⚡ Instalação e Configuração
 Pré-requisitos
 
 Node.js 18+
@@ -55,7 +54,7 @@ npm run dev
 
 Acesse a aplicação em: http://localhost:3000
 
-##🎨 Configuração do Tailwind CSS
+## 🎨 Configuração do Tailwind CSS
 
 O projeto utiliza configurações customizadas para animações e estilos únicos.
 
@@ -79,7 +78,7 @@ pulse-glow → Pulsação com brilho
 
 .shimmer-effect → Container com efeito shimmer
 
-##🧩 Componentes Principais
+## 🧩 Componentes Principais
 
 EmailForm
 Gerencia upload de arquivos, inserção de texto, validações e comunicação com a API.
@@ -90,7 +89,7 @@ Exibe classificação, barra de confiança animada, resposta sugerida e dicas co
 LoadingSpinner
 Spinner duplo com rotações opostas, indicadores de progresso e animações suaves.
 
-##📁 Formatos de Arquivo Suportados
+## 📁 Formatos de Arquivo Suportados
 Formato	Extensão	Descrição
 PDF	.pdf	Documentos Adobe PDF
 Texto	.txt	Arquivos de texto simples
@@ -100,7 +99,7 @@ RTF	.rtf	Rich Text Format
 
 Limite: máximo 10MB por arquivo.
 
-##🌐 API Integration
+## 🌐 API Integration
 Endpoints
 
 POST /process-email → Processa texto direto
@@ -115,7 +114,7 @@ Formato de Resposta
   "email_preview": "Preview do email processado"
 }
 
-##🎨 Personalização de Estilos
+## 🎨 Personalização de Estilos
 Cores Primárias
 // tailwind.config.js
 theme: {
@@ -137,7 +136,7 @@ Adicionar Novas Animações
   100% { /* estado final */ }
 }
 
-##💻 Configuração Recomendada no VS Code
+## 💻 Configuração Recomendada no VS Code
 // .vscode/settings.json
 {
   "css.validate": false,
