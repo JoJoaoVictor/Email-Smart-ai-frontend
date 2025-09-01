@@ -2,7 +2,7 @@
 
 import { useState, useRef } from 'react';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://e-mail-smart-ai-backend-f3c26c5b5d51.herokuapp.com/';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://e-mail-smart-ai-backend-f3c26c5b5d51.herokuapp.com';
 
 // Tipos de arquivo suportados
 const SUPPORTED_FORMATS = {
